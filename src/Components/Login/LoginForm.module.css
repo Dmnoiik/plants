@@ -1,22 +1,19 @@
-form {
-  width: 24rem;
-  padding: 3rem;
-  margin: 0 auto;
-  border: 2px solid black;
-}
-
-.input--container {
+.form--container {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
-  margin-bottom: 16px;
+  gap: 18px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
 }
 
-.input--container label {
-  font-size: 32px;
+.form--toggle {
+  display: flex;
 }
 
-.input--container input {
-  width: 16rem;
+.form--inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

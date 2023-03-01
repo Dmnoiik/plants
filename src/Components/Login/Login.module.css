@@ -7,7 +7,6 @@
 .login--container {
   display: flex;
   align-items: center;
-  gap: 48px;
   flex-direction: column;
 }
 .login--header {
@@ -21,5 +20,5 @@
 }
 
 .plant--img {
-  width: 100px;
+  width: 128px;
 }
