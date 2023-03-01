@@ -1,0 +1,14 @@
+.btn {
+  font-family: inherit;
+  border: none;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

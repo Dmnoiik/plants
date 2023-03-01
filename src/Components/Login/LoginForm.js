@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import style from "./LoginForm.module.css";
 import plantImage from "../Images/plant.jpg";
+import Button from "../Button";
 
 const LoginForm = () => {
   const [isActive, setNewIsActive] = useState(true);
+
   const activeHandler = (event) => {
     if (event.target.classList.value === "LoginForm_active__k8aq0") {
       return;
@@ -37,7 +39,12 @@ const LoginForm = () => {
         <input type="text" placeholder="Email Address" />
         <input type="password" placeholder="Password" />
       </div>
-      <button className={style["form--login"]}>Login</button>
+      <div className={style["login--container"]}>
+        <Button message={"Login"}></Button>
+        <p>
+          Not a member? <span>Sign up</span>
+        </p>
+      </div>
     </form>
   );
 };
