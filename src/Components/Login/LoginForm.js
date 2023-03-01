@@ -3,7 +3,7 @@ import style from "./LoginForm.module.css";
 import Button from "../Button";
 import Signup from "./Signup/Signup";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const [isActive, setNewIsActive] = useState(true);
   const [isSignupActive, setNewIsSignupActive] = useState(false);
 
@@ -21,7 +21,10 @@ const LoginForm = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    props.onSubmit();
   };
+
+  const validatePassword = () => {};
   return (
     <form onSubmit={submitHandler} className={style["form--container"]}>
       <div>
@@ -32,6 +35,7 @@ const LoginForm = () => {
           onClick={activeHandler}
           className={isActive ? style.active : ""}
           disabled={isActive}
+          type="button"
         >
           Login
         </button>
@@ -41,6 +45,7 @@ const LoginForm = () => {
             onSignupClick();
           }}
           className={!isActive ? style.active : ""}
+          type="button"
         >
           Signup
         </button>
@@ -50,11 +55,15 @@ const LoginForm = () => {
       ) : (
         <React.Fragment>
           <div className={style["form--inputs"]}>
-            <input type="text" placeholder="Email Address" />
-            <input type="password" placeholder="Password" />
+            <input type="email" placeholder="Email Address" />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={validatePassword}
+            />
           </div>
           <div className={style["login--container"]}>
-            <Button message={"Login"}></Button>
+            <Button message={"Login"} type="submit"></Button>
             <p>
               Not a member? <span>Sign up</span>
             </p>

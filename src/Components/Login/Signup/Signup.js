@@ -5,10 +5,10 @@ const Signup = () => {
   return (
     <React.Fragment>
       <div className={style["form--inputs"]}>
-        <input type="text" placeholder="Username" required />
-        <input type="text" placeholder="Email Address" required />
-        <input type="password" placeholder="Password" required />
-        <input type="password" placeholder="Repeat password" required />
+        <input type="text" placeholder="Username" />
+        <input type="text" placeholder="Email Address" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Repeat password" />
       </div>
       <div className={style["login--container"]}>
         <Button message={"Create an new account"}></Button>
