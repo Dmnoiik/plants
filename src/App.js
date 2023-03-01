@@ -1,11 +1,16 @@
+import React, { useState } from "react";
+import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
-import MainNavigation from "./Components/MainNavigation/MainNavigation";
 
 function App() {
+  const [isLogged, setIsLogged] = useState(false);
+  const submitHandler = () => {
+    setIsLogged(true);
+    console.log(isLogged);
+  };
   return (
     <div className="App">
-      <MainNavigation />
-      <Login />
+      {!isLogged ? <Login onSubmit={submitHandler} /> : <Home />}
     </div>
   );
 }
