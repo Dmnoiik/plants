@@ -4,7 +4,10 @@ import plantImage from "../Images/plant.jpg";
 
 const LoginForm = () => {
   const [isActive, setNewIsActive] = useState(true);
-  const activeHandler = () => {
+  const activeHandler = (event) => {
+    if (event.target.classList.value === "LoginForm_active__k8aq0") {
+      return;
+    }
     setNewIsActive((prevState) => !prevState);
   };
 
@@ -23,7 +26,12 @@ const LoginForm = () => {
         >
           Login
         </button>
-        <button>Signup</button>
+        <button
+          onClick={activeHandler}
+          className={!isActive ? style.active : ""}
+        >
+          Signup
+        </button>
       </div>
       <div className={style["form--inputs"]}>
         <input type="text" placeholder="Email Address" />
