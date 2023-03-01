@@ -1,5 +1,12 @@
 const LoginForm = () => {
-  return <form>1</form>;
+  return (
+    <form>
+      <div>
+        <label>Username</label>
+        <input type="text" />
+      </div>
+    </form>
+  );
 };
 
 export default LoginForm;

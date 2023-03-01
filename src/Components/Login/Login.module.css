@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login--header {
+  display: flex;
+  align-items: center;
+}
+
+.login--header_h1 {
+  align-self: flex-end;
+  margin: 0;
+}
+
+.plant--img {
+  width: 100px;
+}
