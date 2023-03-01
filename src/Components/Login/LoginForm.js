@@ -3,15 +3,9 @@ import style from "./LoginForm.module.css";
 import Button from "../Button";
 import Signup from "./Signup/Signup";
 
-const reducer = (state, action) => {};
-
 const LoginForm = () => {
   const [isActive, setNewIsActive] = useState(true);
   const [isSignupActive, setNewIsSignupActive] = useState(false);
-  const [state, dispatch] = useReducer(reducer, {
-    isActive: true,
-    signupSelected: false,
-  });
 
   const activeHandler = (event) => {
     if (event.target.classList.value === "LoginForm_active__k8aq0") {
@@ -54,21 +48,19 @@ const LoginForm = () => {
       {isSignupActive ? (
         <Signup />
       ) : (
-        <div className={style["form--inputs"]}>
-          <input type="text" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
-        </div>
+        <React.Fragment>
+          <div className={style["form--inputs"]}>
+            <input type="text" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
+          </div>
+          <div className={style["login--container"]}>
+            <Button message={"Login"}></Button>
+            <p>
+              Not a member? <span>Sign up</span>
+            </p>
+          </div>
+        </React.Fragment>
       )}
-      {/* <div className={style["form--inputs"]}>
-        <input type="text" placeholder="Email Address" />
-        <input type="password" placeholder="Password" />
-      </div> */}
-      <div className={style["login--container"]}>
-        <Button message={"Login"}></Button>
-        <p>
-          Not a member? <span>Sign up</span>
-        </p>
-      </div>
     </form>
   );
 };
