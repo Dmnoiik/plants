@@ -1,0 +1,22 @@
+form {
+  width: 24rem;
+  padding: 3rem;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.input--container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.input--container label {
+  font-size: 32px;
+}
+
+.input--container input {
+  width: 16rem;
+}

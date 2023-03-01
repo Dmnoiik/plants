@@ -3,6 +3,13 @@
   align-items: center;
   justify-content: center;
 } */
+
+.login--container {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-direction: column;
+}
 .login--header {
   display: flex;
   align-items: center;
